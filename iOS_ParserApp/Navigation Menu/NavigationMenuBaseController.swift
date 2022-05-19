@@ -10,7 +10,7 @@ import UIKit
 class NavigationMenuBaseController: UITabBarController {
     
     var customTabBar: TabNavigationMenu!
-    var tabBarHeight: CGFloat = 90.0
+    var tabBarHeight: CGFloat = 60.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class NavigationMenuBaseController: UITabBarController {
         self.customTabBar.translatesAutoresizingMaskIntoConstraints = false
         self.customTabBar.clipsToBounds = true
         self.customTabBar.itemTapped = self.changeTab
-        self.customTabBar.backgroundColor = .green
+        self.customTabBar.backgroundColor = UIColor(red: 95, green: 113, blue: 97, alpha: 0.5)
         
 //        customTabBar.image = UIImage(named: "tabBarbg")
 //        customTabBar.isUserInteractionEnabled = true
@@ -48,7 +48,7 @@ class NavigationMenuBaseController: UITabBarController {
         
         // Add positioning constraints to place the nav menu right where the tab bar should be
         NSLayoutConstraint.activate([
-            self.customTabBar.leadingAnchor.constraint(equalTo: tabBar.leadingAnchor),
+            self.customTabBar.leadingAnchor.constraint(equalTo: tabBar.safeAreaLayoutGuide.leadingAnchor),
             self.customTabBar.trailingAnchor.constraint(equalTo: tabBar.trailingAnchor),
             self.customTabBar.widthAnchor.constraint(equalToConstant: tabBar.frame.width),
             self.customTabBar.heightAnchor.constraint(equalToConstant: tabBarHeight), // Fixed height for nav menu

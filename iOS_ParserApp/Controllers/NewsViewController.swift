@@ -13,7 +13,7 @@ class NewsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.purple
+//        self.view.backgroundColor = UIColor.purple
         let label = UILabel(frame: CGRect.zero)
         label.text = "Calender View Controller"
         label.font = UIFont.systemFont(ofSize: 16)

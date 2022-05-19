@@ -13,7 +13,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.orange
+//        self.view.backgroundColor = UIColor.orange
         let label = UILabel(frame: CGRect.zero)
         label.text = "Friends View Controller"
         label.font = UIFont.systemFont(ofSize: 16)

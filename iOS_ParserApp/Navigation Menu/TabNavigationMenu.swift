@@ -23,7 +23,7 @@ class TabNavigationMenu: UIImageView {
     convenience init(menuItems: [TabItem], frame: CGRect) {
         self.init(frame: frame)
         
-        print(frame)
+//        print(frame)
         
         self.image = UIImage(named: "tabBarbg")
         self.isUserInteractionEnabled = true
@@ -45,7 +45,7 @@ class TabNavigationMenu: UIImageView {
             
             NSLayoutConstraint.activate([
                 itemView.heightAnchor.constraint(equalTo: self.heightAnchor),
-                itemView.widthAnchor.constraint(equalToConstant: itemWidth), // fixing width
+                itemView.widthAnchor.constraint(equalToConstant: itemWidth),
                 
                 itemView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leadingAnchor),
                 itemView.topAnchor.constraint(equalTo: self.topAnchor),
@@ -88,7 +88,7 @@ class TabNavigationMenu: UIImageView {
         
         itemTitleLabel.text = item.displayTitle
         itemTitleLabel.font = UIFont.systemFont(ofSize: 12)
-        itemTitleLabel.textColor = .white // changing color to white
+        itemTitleLabel.textColor = .black // changing color to white
         itemTitleLabel.textAlignment = .left
         itemTitleLabel.textAlignment = .center
         itemTitleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -109,7 +109,7 @@ class TabNavigationMenu: UIImageView {
             itemIconView.heightAnchor.constraint(equalToConstant: 20),
             itemIconView.widthAnchor.constraint(equalToConstant: 20),
             itemIconView.centerXAnchor.constraint(equalTo: tabBarItem.centerXAnchor),
-            itemIconView.centerYAnchor.constraint(equalTo: tabBarItem.centerYAnchor, constant: 8),
+            itemIconView.centerYAnchor.constraint(equalTo: tabBarItem.centerYAnchor, constant: 0),
             
             itemTitleLabel.heightAnchor.constraint(equalToConstant: 13),
             itemTitleLabel.leadingAnchor.constraint(equalTo: itemIconView.trailingAnchor, constant: 2),
