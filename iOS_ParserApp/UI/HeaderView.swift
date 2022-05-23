@@ -1,13 +1,13 @@
 //
-//  Header.swift
+//  HeaderView.swift
 //  iOS_ParserApp
 //
-//  Created by Настя Сергієнко on 19.05.2022.
+//  Created by Настя Сергієнко on 20.05.2022.
 //
 
 import UIKit
 
-class Header: UITableViewCell {
+class HeaderView: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
