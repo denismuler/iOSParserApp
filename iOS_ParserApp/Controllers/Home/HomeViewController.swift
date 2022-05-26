@@ -18,6 +18,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return table
     }()
     
+    private let headerView: HeaderView = {
+            let view = HeaderView()
+            return view
+        }()
+    
     private var articles = [Article]()
     private var viewModels = [NewsTableViewCellViewModel]()
     
@@ -29,14 +34,34 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         view.backgroundColor = .white
-        
+        tableView.backgroundColor = .systemGray
         fetchTopStories()
+        configureUI()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        tableView.frame = view.bounds
-        tableView.backgroundColor = .systemGray
+    func configureUI() {
+        
+        // Setup tableView
+        view.addSubview(headerView)
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            headerView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            headerView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            headerView.heightAnchor.constraint(equalToConstant: 150)
+        ])
+        
+        // Setup tableView
+        view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
+            tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
     }
     
     private func fetchTopStories() {
@@ -92,18 +117,4 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//            let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
-//
-//            let label = UILabel()
-//            label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
-//            label.text = "BODYA"
-//        label.font = .systemFont(ofSize: 20, weight: .bold)
-//            label.textColor = .yellow
-//
-//            headerView.addSubview(label)
-//
-//            return headerView
-//        }
 }

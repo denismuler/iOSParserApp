@@ -11,7 +11,6 @@ class NewsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
 //        self.view.backgroundColor = UIColor.purple
         let label = UILabel(frame: CGRect.zero)
@@ -29,5 +28,4 @@ class NewsViewController: UIViewController {
             label.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
         ])
     }
-
 }

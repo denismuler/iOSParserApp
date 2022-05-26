@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2F8EC4444A941E4CA541F720 /* Pods_iOS_ParserApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F074E5F1D88273BB5C983EB /* Pods_iOS_ParserApp.framework */; };
 		4C27EBDB28351EE7001A7842 /* NavigationMenuBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C27EBDA28351EE7001A7842 /* NavigationMenuBaseController.swift */; };
+		4C46D90B283E84AF00ABDC5C /* Search.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C46D90A283E84AF00ABDC5C /* Search.xib */; };
+		4C46D90D283E84B700ABDC5C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C46D90C283E84B700ABDC5C /* SearchView.swift */; };
 		4C5B9A192835206000D9650D /* TabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B9A182835206000D9650D /* TabNavigationMenu.swift */; };
 		4C5B9A1D283520DA00D9650D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B9A1C283520DA00D9650D /* HomeViewController.swift */; };
 		4C5B9A1F283520EB00D9650D /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B9A1E283520EB00D9650D /* NewsViewController.swift */; };
@@ -20,10 +22,10 @@
 		4C6148D328341C0F009D1995 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6148D228341C0F009D1995 /* Assets.xcassets */; };
 		4C6148D628341C0F009D1995 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6148D428341C0F009D1995 /* LaunchScreen.storyboard */; };
 		4C6148FB283425AC009D1995 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6148FA283425AC009D1995 /* TabItem.swift */; };
+		4C83F0082837E6AF0069928F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C83F0062837E6AF0069928F /* HeaderView.swift */; };
+		4C83F0092837E6AF0069928F /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C83F0072837E6AF0069928F /* Header.xib */; };
 		4CC240CC28364EC400E4B091 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC240CB28364EC400E4B091 /* APICaller.swift */; };
 		4CC240CE28365C5C00E4B091 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC240CD28365C5C00E4B091 /* NewsTableViewCell.swift */; };
-		4CD50B622836E4A7009AA040 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD50B602836E4A6009AA040 /* Header.swift */; };
-		4CD50B632836E4A7009AA040 /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD50B612836E4A6009AA040 /* Header.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		0FC10C8E8E75A7D899519B52 /* Pods-iOS_ParserApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_ParserApp.release.xcconfig"; path = "Target Support Files/Pods-iOS_ParserApp/Pods-iOS_ParserApp.release.xcconfig"; sourceTree = "<group>"; };
 		2F074E5F1D88273BB5C983EB /* Pods_iOS_ParserApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_ParserApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C27EBDA28351EE7001A7842 /* NavigationMenuBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMenuBaseController.swift; sourceTree = "<group>"; };
+		4C46D90A283E84AF00ABDC5C /* Search.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Search.xib; sourceTree = "<group>"; };
+		4C46D90C283E84B700ABDC5C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		4C5B9A182835206000D9650D /* TabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationMenu.swift; sourceTree = "<group>"; };
 		4C5B9A1C283520DA00D9650D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4C5B9A1E283520EB00D9650D /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -62,10 +66,10 @@
 		4C6148DC28341C0F009D1995 /* iOS_ParserAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_ParserAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6148E628341C0F009D1995 /* iOS_ParserAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_ParserAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6148FA283425AC009D1995 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		4C83F0062837E6AF0069928F /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		4C83F0072837E6AF0069928F /* Header.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
 		4CC240CB28364EC400E4B091 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		4CC240CD28365C5C00E4B091 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
-		4CD50B602836E4A6009AA040 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
-		4CD50B612836E4A6009AA040 /* Header.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
 		B3952F6741171B345538B6B2 /* Pods-iOS_ParserApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_ParserApp.debug.xcconfig"; path = "Target Support Files/Pods-iOS_ParserApp/Pods-iOS_ParserApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,8 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				4CD50B582836E288009AA040 /* Home */,
-				4C5B9A1E283520EB00D9650D /* NewsViewController.swift */,
 				4C5B9A202835210000D9650D /* SearchViewController.swift */,
+				4C5B9A1E283520EB00D9650D /* NewsViewController.swift */,
 				4C5B9A22283521C400D9650D /* MoreViewController.swift */,
 				4C5B9A24283521EF00D9650D /* ProfileViewController.swift */,
 			);
@@ -173,8 +177,10 @@
 		4CD50B592836E2BA009AA040 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				4CD50B602836E4A6009AA040 /* Header.swift */,
-				4CD50B612836E4A6009AA040 /* Header.xib */,
+				4C83F0062837E6AF0069928F /* HeaderView.swift */,
+				4C83F0072837E6AF0069928F /* Header.xib */,
+				4C46D90C283E84B700ABDC5C /* SearchView.swift */,
+				4C46D90A283E84AF00ABDC5C /* Search.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -294,9 +300,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CD50B632836E4A7009AA040 /* Header.xib in Resources */,
+				4C83F0092837E6AF0069928F /* Header.xib in Resources */,
 				4C6148D628341C0F009D1995 /* LaunchScreen.storyboard in Resources */,
 				4C6148D328341C0F009D1995 /* Assets.xcassets in Resources */,
+				4C46D90B283E84AF00ABDC5C /* Search.xib in Resources */,
 				4C6148D128341C0E009D1995 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,10 +375,11 @@
 				4CC240CE28365C5C00E4B091 /* NewsTableViewCell.swift in Sources */,
 				4C5B9A192835206000D9650D /* TabNavigationMenu.swift in Sources */,
 				4C5B9A212835210000D9650D /* SearchViewController.swift in Sources */,
-				4CD50B622836E4A7009AA040 /* Header.swift in Sources */,
 				4CC240CC28364EC400E4B091 /* APICaller.swift in Sources */,
 				4C6148CA28341C0E009D1995 /* AppDelegate.swift in Sources */,
 				4C5B9A23283521C400D9650D /* MoreViewController.swift in Sources */,
+				4C83F0082837E6AF0069928F /* HeaderView.swift in Sources */,
+				4C46D90D283E84B700ABDC5C /* SearchView.swift in Sources */,
 				4C5B9A25283521EF00D9650D /* ProfileViewController.swift in Sources */,
 				4C5B9A1D283520DA00D9650D /* HomeViewController.swift in Sources */,
 				4C6148FB283425AC009D1995 /* TabItem.swift in Sources */,

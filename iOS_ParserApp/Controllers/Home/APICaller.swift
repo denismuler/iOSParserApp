@@ -2,7 +2,7 @@
 //  APICaller.swift
 //  iOS_ParserApp
 //
-//  Created by Настя Сергієнко on 19.05.2022.
+//  Created by Denys Melnyk on 19.05.2022.
 //
 
 import Foundation
