@@ -7,11 +7,13 @@
 
 import UIKit
 
-class SearchView: UIView {
+class SearchView: UIView, UITextFieldDelegate {
     
     @IBOutlet var containerView1: UIView!
     @IBOutlet weak var listButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
+    
+    @IBOutlet weak var textField: UITextField!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -21,6 +23,13 @@ class SearchView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
+        
+        textField.delegate = self
+    }
+    
+    func textFieldFunc(textField: UITextField) {
+       
+        
     }
     
     private func commonInit() {
@@ -30,17 +39,17 @@ class SearchView: UIView {
         clipsToBounds = true
         layer.cornerRadius = 20
         layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
-        
-//        addShadow(offset: .init(width: 0, height: 6),
-//                                color: R.color.shadowColor()!,
-//                                radius: 20,
-//                                opacity: 0.06)
-        
+
+    
         addSubview(containerView1)
         containerView1.frame = self.bounds
         containerView1.autoresizingMask = [.flexibleHeight, .flexibleWidth]
 
         containerView1.layer.cornerRadius = 20
         containerView1.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        var history = textField.text
     }
 }

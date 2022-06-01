@@ -110,3 +110,24 @@
 //        historyRecords.onNext(SearchHistoryManager().getHistoryRecords())
 //    }
 //}
+
+//public func addSearchRecord(nameValue: String) {
+//    do {
+//        try db.run(searchHistory.insert(text <- nameValue))
+//    } catch {
+//        print(error.localizedDescription)
+//    }
+//}
+//public func getHistoryRecords() -> [String] {
+//
+//    var historyRecords: [String] = []
+//
+//    do {
+//        for record in try db.prepare(searchHistory) {
+//            historyRecords.append(record[text])
+//        }
+//    } catch {
+//        print(error.localizedDescription)
+//    }
+//    return historyRecords
+//}

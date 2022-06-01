@@ -8,20 +8,12 @@
 import UIKit
 import SQLite
 
-class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
     private let searchView: SearchView = {
             let view = SearchView()
             return view
         }()
-//
-//    private let tableView: UITableView = {
-//        let table = UITableView()
-//        tableView.register(SearchHistoryTableViewCell.self, forCellReuseIdentifier: SearchHistoryTableViewCell.identifier)
-//        return table
-//    }()
-    
-//    private var viewModels = [SearchHistoryTableViewCell]()
 
     let tableView = UITableView()
     
@@ -30,6 +22,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         for x in 0...20 {
             data.append("Some data\(x)")
         }
@@ -45,7 +38,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-//        tableView.frame = view.bounds
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -88,29 +80,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         print("cell tapped")
     }
     
-//    static func dataSource() -> DataSource<SearchTableViewSection> {
-//        return .init(configureCell: { dataSource, tableView, indexPath, item -> UITableViewCell in
-//            switch dataSource[indexPath] {
-//            case let .searchHistory(title):
-//                tableView.separatorStyle = .singleLine
-//                tableView.separatorColor = .white
-//                tableView.refreshControl?.isHidden = true
-//                tableView.rowHeight = 49
-//                let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.searchHistoryCell,
-//                                                         for: indexPath)!
-//                cell.itemLabel.text = title
-//                return cell
-//            case let .news(article):
-//                tableView.separatorStyle = .none
-//                tableView.rowHeight = 118
-//                tableView.refreshControl?.isHidden = false
-//                let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.newsCell,
-//                                                         for: indexPath)!
-//                cell.newsImageView.load(url: URL(string: article.image)!)
-//                cell.titleLabel.text = article.title
-//                cell.bodyLabel.text = article.description
-//                return cell
-//            }})
-//    }
     
 }
+   

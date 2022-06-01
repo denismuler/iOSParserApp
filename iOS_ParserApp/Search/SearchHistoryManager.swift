@@ -8,6 +8,12 @@
 import Foundation
 import SQLite
 
+
+protocol SearchViewControllerDelegate: SearchViewController {
+   
+    func searchHistoryCell (for cell: SearchHistoryTableViewCell)
+}
+
 class SearchHistoryManager {
  
     static var shared = SearchHistoryManager()

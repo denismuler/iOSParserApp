@@ -19,6 +19,7 @@
                 <outlet property="containerView1" destination="jxk-pp-Td3" id="7wv-ea-wnw"/>
                 <outlet property="filterButton" destination="kaw-Mb-QOz" id="Byt-9p-wWu"/>
                 <outlet property="listButton" destination="LE4-KU-hHa" id="K04-43-iui"/>
+                <outlet property="textField" destination="Yic-HE-zWV" id="mBY-Hh-hjP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -29,8 +30,8 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="1Ll-Me-AIs">
                     <rect key="frame" x="15" y="0.0" width="388" height="113"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MULLER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N84-J0-ofh">
-                            <rect key="frame" x="134" y="0.0" width="120.5" height="35"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N84-J0-ofh">
+                            <rect key="frame" x="160" y="0.0" width="68.5" height="35"/>
                             <fontDescription key="fontDescription" name="MuseoSansCyrl-900Italic" family="Museo Sans Cyrl" pointSize="30"/>
                             <color key="textColor" systemColor="systemOrangeColor"/>
                             <nil key="highlightedColor"/>
