@@ -8,7 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2F8EC4444A941E4CA541F720 /* Pods_iOS_ParserApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F074E5F1D88273BB5C983EB /* Pods_iOS_ParserApp.framework */; };
+		4C02E3CC28463BA2001D04FD /* SearchCoordinator .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C02E3CB28463BA2001D04FD /* SearchCoordinator .swift */; };
+		4C02E3CE28463BB8001D04FD /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C02E3CD28463BB8001D04FD /* SearchViewModel.swift */; };
+		4C02E3D028463C99001D04FD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C02E3CF28463C99001D04FD /* Coordinator.swift */; };
+		4C02E3D2284641A4001D04FD /* SearchHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C02E3D1284641A4001D04FD /* SearchHistoryTableViewCell.xib */; };
+		4C02E3D4284641B8001D04FD /* SearchHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C02E3D3284641B8001D04FD /* SearchHistoryTableViewCell.swift */; };
+		4C02E3D728468B3B001D04FD /* SQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C02E3D628468B3B001D04FD /* SQLite.swift */; };
 		4C27EBDB28351EE7001A7842 /* NavigationMenuBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C27EBDA28351EE7001A7842 /* NavigationMenuBaseController.swift */; };
+		4C393ED828450B83007295AC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 4C393ED728450B83007295AC /* SQLite */; };
+		4C393EDA28450E9D007295AC /* SearchHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C393ED928450E9D007295AC /* SearchHistoryManager.swift */; };
 		4C46D90B283E84AF00ABDC5C /* Search.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C46D90A283E84AF00ABDC5C /* Search.xib */; };
 		4C46D90D283E84B700ABDC5C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C46D90C283E84B700ABDC5C /* SearchView.swift */; };
 		4C5B9A192835206000D9650D /* TabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B9A182835206000D9650D /* TabNavigationMenu.swift */; };
@@ -48,7 +56,14 @@
 /* Begin PBXFileReference section */
 		0FC10C8E8E75A7D899519B52 /* Pods-iOS_ParserApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_ParserApp.release.xcconfig"; path = "Target Support Files/Pods-iOS_ParserApp/Pods-iOS_ParserApp.release.xcconfig"; sourceTree = "<group>"; };
 		2F074E5F1D88273BB5C983EB /* Pods_iOS_ParserApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_ParserApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C02E3CB28463BA2001D04FD /* SearchCoordinator .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchCoordinator .swift"; sourceTree = "<group>"; };
+		4C02E3CD28463BB8001D04FD /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		4C02E3CF28463C99001D04FD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4C02E3D1284641A4001D04FD /* SearchHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		4C02E3D3284641B8001D04FD /* SearchHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		4C02E3D628468B3B001D04FD /* SQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLite.swift; sourceTree = "<group>"; };
 		4C27EBDA28351EE7001A7842 /* NavigationMenuBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMenuBaseController.swift; sourceTree = "<group>"; };
+		4C393ED928450E9D007295AC /* SearchHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryManager.swift; sourceTree = "<group>"; };
 		4C46D90A283E84AF00ABDC5C /* Search.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Search.xib; sourceTree = "<group>"; };
 		4C46D90C283E84B700ABDC5C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		4C5B9A182835206000D9650D /* TabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationMenu.swift; sourceTree = "<group>"; };
@@ -78,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C393ED828450B83007295AC /* SQLite in Frameworks */,
 				2F8EC4444A941E4CA541F720 /* Pods_iOS_ParserApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,12 +123,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4C02E3D52846453F001D04FD /* News */ = {
+			isa = PBXGroup;
+			children = (
+				4C5B9A1E283520EB00D9650D /* NewsViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		4C393ED22844EFB2007295AC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4CC240CB28364EC400E4B091 /* APICaller.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4C393EDD28451033007295AC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4C393ED928450E9D007295AC /* SearchHistoryManager.swift */,
+				4C02E3CB28463BA2001D04FD /* SearchCoordinator .swift */,
+				4C02E3CF28463C99001D04FD /* Coordinator.swift */,
+				4C02E3CD28463BB8001D04FD /* SearchViewModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		4C5B9A1B283520AB00D9650D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				4CD50B582836E288009AA040 /* Home */,
-				4C5B9A202835210000D9650D /* SearchViewController.swift */,
-				4C5B9A1E283520EB00D9650D /* NewsViewController.swift */,
+				4C02E3D52846453F001D04FD /* News */,
 				4C5B9A22283521C400D9650D /* MoreViewController.swift */,
 				4C5B9A24283521EF00D9650D /* ProfileViewController.swift */,
 			);
@@ -143,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				4C5B9A1B283520AB00D9650D /* Controllers */,
+				4C393EDD28451033007295AC /* Data */,
+				4C393ED22844EFB2007295AC /* API */,
 				4C6148F928342596009D1995 /* Navigation Menu */,
 				4CD50B592836E2BA009AA040 /* UI */,
 				4C6148CF28341C0E009D1995 /* Main.storyboard */,
@@ -168,8 +212,9 @@
 			isa = PBXGroup;
 			children = (
 				4C5B9A1C283520DA00D9650D /* HomeViewController.swift */,
+				4C5B9A202835210000D9650D /* SearchViewController.swift */,
+				4C02E3D628468B3B001D04FD /* SQLite.swift */,
 				4CC240CD28365C5C00E4B091 /* NewsTableViewCell.swift */,
-				4CC240CB28364EC400E4B091 /* APICaller.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -181,6 +226,8 @@
 				4C83F0072837E6AF0069928F /* Header.xib */,
 				4C46D90C283E84B700ABDC5C /* SearchView.swift */,
 				4C46D90A283E84AF00ABDC5C /* Search.xib */,
+				4C02E3D3284641B8001D04FD /* SearchHistoryTableViewCell.swift */,
+				4C02E3D1284641A4001D04FD /* SearchHistoryTableViewCell.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -212,6 +259,9 @@
 			dependencies = (
 			);
 			name = iOS_ParserApp;
+			packageProductDependencies = (
+				4C393ED728450B83007295AC /* SQLite */,
+			);
 			productName = iOS_ParserApp;
 			productReference = 4C6148C628341C0E009D1995 /* iOS_ParserApp.app */;
 			productType = "com.apple.product-type.application";
@@ -284,6 +334,9 @@
 				Base,
 			);
 			mainGroup = 4C6148BD28341C0E009D1995;
+			packageReferences = (
+				4C393ED628450B83007295AC /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = 4C6148C728341C0E009D1995 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -300,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C02E3D2284641A4001D04FD /* SearchHistoryTableViewCell.xib in Resources */,
 				4C83F0092837E6AF0069928F /* Header.xib in Resources */,
 				4C6148D628341C0F009D1995 /* LaunchScreen.storyboard in Resources */,
 				4C6148D328341C0F009D1995 /* Assets.xcassets in Resources */,
@@ -381,8 +435,14 @@
 				4C83F0082837E6AF0069928F /* HeaderView.swift in Sources */,
 				4C46D90D283E84B700ABDC5C /* SearchView.swift in Sources */,
 				4C5B9A25283521EF00D9650D /* ProfileViewController.swift in Sources */,
+				4C02E3D028463C99001D04FD /* Coordinator.swift in Sources */,
+				4C393EDA28450E9D007295AC /* SearchHistoryManager.swift in Sources */,
 				4C5B9A1D283520DA00D9650D /* HomeViewController.swift in Sources */,
+				4C02E3CC28463BA2001D04FD /* SearchCoordinator .swift in Sources */,
+				4C02E3CE28463BB8001D04FD /* SearchViewModel.swift in Sources */,
+				4C02E3D728468B3B001D04FD /* SQLite.swift in Sources */,
 				4C6148FB283425AC009D1995 /* TabItem.swift in Sources */,
+				4C02E3D4284641B8001D04FD /* SearchHistoryTableViewCell.swift in Sources */,
 				4C5B9A1F283520EB00D9650D /* NewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -726,6 +786,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C393ED628450B83007295AC /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C393ED728450B83007295AC /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C393ED628450B83007295AC /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4C6148BE28341C0E009D1995 /* Project object */;
 }

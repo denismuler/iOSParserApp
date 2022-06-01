@@ -41,7 +41,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func configureUI() {
         
-        // Setup tableView
         view.addSubview(headerView)
         headerView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -52,7 +51,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             headerView.heightAnchor.constraint(equalToConstant: 150)
         ])
         
-        // Setup tableView
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -88,8 +86,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModels.count
-        //        return 10
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: NewsTableViewCell.identifier,

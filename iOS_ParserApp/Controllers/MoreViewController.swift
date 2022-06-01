@@ -12,8 +12,6 @@ class MoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-//        self.view.backgroundColor = UIColor.black
         let label = UILabel(frame: CGRect.zero)
         label.text = "Friends View Controller"
         label.font = UIFont.systemFont(ofSize: 16)

@@ -9,19 +9,10 @@ import UIKit
 
 class SearchView: UIView {
     
-    
     @IBOutlet var containerView1: UIView!
-    //    @IBOutlet weak var stackView: UIStackView!
-//    @IBOutlet weak var logoLabel: UILabel!
-//    @IBOutlet weak var searchBarStackView: UIStackView!
-//    @IBInspectable var isSearchBarHidden: Bool {
-//        set { searchBarStackView.isHidden = !newValue }
-//        get { return !searchBarStackView.isHidden }
-//    }
-//    @IBOutlet weak var searchTextField: SearchTextField!
-//    @IBOutlet weak var filterButton: CircleButton!
-//    @IBOutlet weak var sortingButton: CircleButton!
-//
+    @IBOutlet weak var listButton: UIButton!
+    @IBOutlet weak var filterButton: UIButton!
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
@@ -34,6 +25,7 @@ class SearchView: UIView {
     
     private func commonInit() {
         Bundle.main.loadNibNamed("Search", owner: self, options: nil)
+        filterButton.setTitle(nil, for: .normal)
         
         clipsToBounds = true
         layer.cornerRadius = 20

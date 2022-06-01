@@ -159,11 +159,7 @@ class TabNavigationMenu: UIImageView {
         
         let inactiveTab = self.subviews[tab]
         
-        // hiding label again when deselected
         inactiveTab.viewWithTag(12)?.isHidden = true
-        //inactiveTab.viewWithTag(14)?.isHidden = true
-        
-        // changing constraints for animation
         
         NSLayoutConstraint.deactivate(inactiveTab.constraints.filter({$0.firstItem === inactiveTab.viewWithTag(13) && $0.firstAttribute == .centerX}))
         
