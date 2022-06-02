@@ -5,7 +5,7 @@ target 'iOS_ParserApp' do
   use_frameworks!
 
   # Pods for iOS_ParserApp
-
-pod 'R.swift'
+  pod 'R.swift'
+  pod 'IQKeyboardManagerSwift'
 
 end

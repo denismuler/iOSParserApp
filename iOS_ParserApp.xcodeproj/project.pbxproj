@@ -208,6 +208,7 @@
 		4C6148C828341C0E009D1995 /* iOS_ParserApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA3352F62848E8BD002935FA /* Application */,
 				4C5B9A1B283520AB00D9650D /* Controllers */,
 				4C393EDD28451033007295AC /* Search */,
 				4C1F30FB2847FD63000B8F33 /* Protocols */,
@@ -228,7 +229,6 @@
 				4C6148FA283425AC009D1995 /* TabItem.swift */,
 				4C27EBDA28351EE7001A7842 /* NavigationMenuBaseController.swift */,
 				4C5B9A182835206000D9650D /* TabNavigationMenu.swift */,
-				4C6148C928341C0E009D1995 /* AppDelegate.swift */,
 			);
 			path = "Navigation Menu";
 			sourceTree = "<group>";
@@ -263,6 +263,14 @@
 				0FC10C8E8E75A7D899519B52 /* Pods-iOS_ParserApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA3352F62848E8BD002935FA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4C6148C928341C0E009D1995 /* AppDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -642,7 +650,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TZALL639VQ;
+				DEVELOPMENT_TEAM = 9R45Q2DW4H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_ParserApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -672,7 +680,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TZALL639VQ;
+				DEVELOPMENT_TEAM = 9R45Q2DW4H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_ParserApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
