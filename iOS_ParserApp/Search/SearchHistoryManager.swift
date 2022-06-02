@@ -8,12 +8,6 @@
 import Foundation
 import SQLite
 
-
-protocol SearchViewControllerDelegate: SearchViewController {
-   
-    func searchHistoryCell (for cell: SearchHistoryTableViewCell)
-}
-
 class SearchHistoryManager {
  
     static var shared = SearchHistoryManager()
@@ -27,7 +21,6 @@ class SearchHistoryManager {
           
         do {
             let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first ?? ""
-  
             db = try Connection("\(path)/search_history.sqlite3")
             searchHistory = Table("search_history")
             

@@ -21,7 +21,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        searchView.delegate = self
         
         for x in 0...20 {
             data.append("Some data\(x)")
@@ -79,7 +79,14 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.deselectRow(at: indexPath, animated: true)
         print("cell tapped")
     }
-    
-    
 }
-   
+
+// MARK: - SearchViewDelegate
+extension SearchViewController: SearchViewDelegate {
+    func textFieldChanged(with string: String) {
+        // Logic with timer should be here =)
+        if string.count > 4 {
+            SearchHistoryManager.shared.addSearchRecord(nameValue: string)
+        }
+    }
+}

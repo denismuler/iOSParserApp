@@ -7,13 +7,18 @@
 
 import UIKit
 
+protocol SearchViewDelegate {
+    func textFieldChanged(with string: String)
+}
+
 class SearchView: UIView, UITextFieldDelegate {
     
     @IBOutlet var containerView1: UIView!
     @IBOutlet weak var listButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
-    
     @IBOutlet weak var textField: UITextField!
+    
+    var delegate: SearchViewDelegate?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -25,11 +30,6 @@ class SearchView: UIView, UITextFieldDelegate {
         commonInit()
         
         textField.delegate = self
-    }
-    
-    func textFieldFunc(textField: UITextField) {
-       
-        
     }
     
     private func commonInit() {
@@ -50,6 +50,11 @@ class SearchView: UIView, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        var history = textField.text
+        print("textFieldDidEndEditing")
+        // add another method into protocol
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        delegate?.textFieldChanged(with: textField.text ?? "")
     }
 }
