@@ -91,18 +91,20 @@ class NewsTableViewCell: UITableViewCell {
         newsImageView.image = nil
     }
     
-    func configure(with viewModel: NewsTableViewCellViewModel){
+    func configure(with viewModel: NewsTableViewCellViewModel) {
         newsTitleLabel.text = viewModel.title
         subtitleLabel.text = viewModel.subtitle
         
         if let data = viewModel.imageData {
             newsImageView.image = UIImage(data: data)
         }
+        
         else if let url = viewModel.imageURl {
             URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
                 guard let data = data, error == nil else {
                     return
                 }
+                
                 viewModel.imageData = data
                     DispatchQueue.main.async {
                         self?.newsImageView.image = UIImage(data: data)

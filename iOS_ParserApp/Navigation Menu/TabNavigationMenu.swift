@@ -22,9 +22,7 @@ class TabNavigationMenu: UIImageView {
     
     convenience init(menuItems: [TabItem], frame: CGRect) {
         self.init(frame: frame)
-        
-//        print(frame)
-        
+                
         self.image = UIImage(named: "tabBarbg")
         self.isUserInteractionEnabled = true
         
@@ -61,9 +59,7 @@ class TabNavigationMenu: UIImageView {
         let itemTitleLabel = UILabel(frame: CGRect.zero)
         let itemIconView = UIImageView(frame: CGRect.zero)
         let selectedItemView = UIImageView(frame: CGRect.zero)
-        
-        // adding tags to get views for modification when selected/unselected
-        
+                
         tabBarItem.tag = 11
         itemTitleLabel.tag = 12
         itemIconView.tag = 13
@@ -85,18 +81,17 @@ class TabNavigationMenu: UIImageView {
         
         selectedItemView.isHidden = true
         
-        
         itemTitleLabel.text = item.displayTitle
         itemTitleLabel.font = UIFont.systemFont(ofSize: 12)
-        itemTitleLabel.textColor = .black // changing color to white
+        itemTitleLabel.textColor = .black
         itemTitleLabel.textAlignment = .left
         itemTitleLabel.textAlignment = .center
         itemTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         itemTitleLabel.clipsToBounds = true
-        itemTitleLabel.isHidden = true // hiding label for now
+        itemTitleLabel.isHidden = true
         
         itemIconView.image = item.icon!.withRenderingMode(.automatic)
-        itemIconView.contentMode = .scaleAspectFit // added to stop stretching
+        itemIconView.contentMode = .scaleAspectFit
         itemIconView.translatesAutoresizingMaskIntoConstraints = false
         itemIconView.clipsToBounds = true
         tabBarItem.layer.backgroundColor = UIColor.clear.cgColor
@@ -119,7 +114,6 @@ class TabNavigationMenu: UIImageView {
         tabBarItem.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleTap)))
         return tabBarItem
     }
-    
     
     @objc func handleTap(_ sender: UIGestureRecognizer) {
         self.switchTab(from: self.activeItem, to: sender.view!.tag)
@@ -145,7 +139,6 @@ class TabNavigationMenu: UIImageView {
             tabToActivate.viewWithTag(14)?.transform = CGAffineTransform(scaleX: 1, y: 1)
             self.layoutIfNeeded()
         }) { (Bool) in
-            
             
             tabToActivate.viewWithTag(14)?.isHidden = false
         }
@@ -173,8 +166,5 @@ class TabNavigationMenu: UIImageView {
         }) { (Bool) in
             inactiveTab.viewWithTag(14)?.isHidden = true
         }
-        
-    
-        
     }
 }

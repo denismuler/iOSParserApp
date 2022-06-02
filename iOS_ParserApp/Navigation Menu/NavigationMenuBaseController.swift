@@ -24,7 +24,7 @@ class NavigationMenuBaseController: UITabBarController {
             self.viewControllers = controllers
         }
         
-        self.selectedIndex = 0 // default our selected index to the first item
+        self.selectedIndex = 0
     }
     
     private func setupCustomTabBar(_ items: [TabItem], completion: @escaping ([UIViewController]) -> Void){
@@ -33,7 +33,6 @@ class NavigationMenuBaseController: UITabBarController {
         print(UIScreen.main.bounds)
         var controllers = [UIViewController]()
         
-        // hide the tab bar
         tabBar.isHidden = true
         self.customTabBar = TabNavigationMenu(menuItems: items, frame: frame)
         self.customTabBar.translatesAutoresizingMaskIntoConstraints = false
@@ -43,10 +42,9 @@ class NavigationMenuBaseController: UITabBarController {
         
 //        customTabBar.image = UIImage(named: "tabBarbg")
 //        customTabBar.isUserInteractionEnabled = true
-        // Add it to the view
+      
         self.view.addSubview(customTabBar)
         
-        // Add positioning constraints to place the nav menu right where the tab bar should be
         NSLayoutConstraint.activate([
             self.customTabBar.leadingAnchor.constraint(equalTo: tabBar.safeAreaLayoutGuide.leadingAnchor),
             self.customTabBar.trailingAnchor.constraint(equalTo: tabBar.trailingAnchor),
@@ -57,11 +55,11 @@ class NavigationMenuBaseController: UITabBarController {
         
         print(customTabBar.frame)
         for i in 0 ..< items.count {
-            controllers.append(items[i].viewController) // we fetch the matching view controller and append here
+            controllers.append(items[i].viewController)
         }
         
-        self.view.layoutIfNeeded() // important step
-        completion(controllers) // setup complete. handoff here
+        self.view.layoutIfNeeded()
+        completion(controllers)
     }
     
     func changeTab(tab: Int) {

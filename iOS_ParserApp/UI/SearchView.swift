@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol SearchViewDelegate {
-    func textFieldChanged(with string: String)
+protocol SearchViewDelegate: SearchViewController {
+    func addSearchRecord(nameValue: String)
 }
 
 class SearchView: UIView, UITextFieldDelegate {
@@ -55,6 +55,6 @@ class SearchView: UIView, UITextFieldDelegate {
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        delegate?.textFieldChanged(with: textField.text ?? "")
+        delegate?.addSearchRecord(nameValue: textField.text ?? "")
     }
 }

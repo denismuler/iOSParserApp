@@ -9,8 +9,6 @@ import UIKit
 
 class HeaderView: UIView {
     
-    
-    
     @IBOutlet var containerView: UIView!
 
     required init?(coder: NSCoder) {

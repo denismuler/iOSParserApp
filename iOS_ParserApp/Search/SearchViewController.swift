@@ -6,10 +6,9 @@
 //
 
 import UIKit
-import SQLite
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-   
+    
     private let searchView: SearchView = {
             let view = SearchView()
             return view
@@ -17,8 +16,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     let tableView = UITableView()
     
+    var timer:Timer?
     var data = [String]()
-    
+    var actionClosure : (()->Void)?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         searchView.delegate = self
@@ -40,8 +41,13 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLayoutSubviews()
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        var data = Array<Any>()
+        return data.count
     }
     
     func configureUI() {
@@ -69,9 +75,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
-                                                 for: indexPath)
-        cell.textLabel?.text = data[indexPath.row]
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
+//                                                 for: indexPath)
+        var data = SearchHistoryManager.shared.getHistoryRecords()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SearchHistoryTableViewCell
+//        cell.textLabel?.text = data[indexPath.row]
+        cell.textLabel?.text = data[indexPath.row] as! String
         return cell
     }
     
@@ -83,10 +92,23 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
 // MARK: - SearchViewDelegate
 extension SearchViewController: SearchViewDelegate {
-    func textFieldChanged(with string: String) {
-        // Logic with timer should be here =)
-        if string.count > 4 {
-            SearchHistoryManager.shared.addSearchRecord(nameValue: string)
+   
+    func addSearchRecord(nameValue: String) {
+        // Logic with timer should be here =
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self,
+                                     selector: #selector(self.executeAction),
+                                     userInfo: nil, repeats: false)
+
+        if nameValue.count > 4 {
+            SearchHistoryManager.shared.addSearchRecord(nameValue: nameValue)
         }
+    }
+    
+    @objc func executeAction() {
+        actionClosure?()
+    }
+    
+    func textFieldChanged(with string: String) {
+       
     }
 }

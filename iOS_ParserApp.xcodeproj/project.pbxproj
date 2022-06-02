@@ -167,6 +167,7 @@
 		4C393EDD28451033007295AC /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				4C5B9A202835210000D9650D /* SearchViewController.swift */,
 				4C393ED928450E9D007295AC /* SearchHistoryManager.swift */,
 				4C1F31002848036B000B8F33 /* SearchDataSource.swift */,
 				4C02E3CD28463BB8001D04FD /* SearchViewModel.swift */,
@@ -237,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				4C5B9A1C283520DA00D9650D /* HomeViewController.swift */,
-				4C5B9A202835210000D9650D /* SearchViewController.swift */,
 				4CC240CD28365C5C00E4B091 /* NewsTableViewCell.swift */,
 			);
 			path = Home;

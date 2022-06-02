@@ -12,6 +12,7 @@ final class APICaller {
     struct Constants {
         static let topHeadlinesURL = URL(string:  "https://gnews.io/api/v4/search?q=example&token=6c37bfdd1f82599774137b25eb8f9a09")
     }
+    
     private init() {}
     
     public func getTopStories(completion: @escaping(Result<[Article], Error>) -> Void) {
@@ -26,9 +27,7 @@ final class APICaller {
             else if let data = data {
                 
                 do {
-                    
                     let result = try JSONDecoder().decode(APIResponse.self, from: data)
-//                    print("Articles: \(result.articles.count)")
                     completion(.success(result.articles))
                 }
                 catch {

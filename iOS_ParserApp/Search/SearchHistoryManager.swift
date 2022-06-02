@@ -39,6 +39,7 @@ class SearchHistoryManager {
             print(error.localizedDescription)
         }
     }
+    
      public func isExists(searchedText: String) -> Bool {
         var isExists: Bool = false
     
