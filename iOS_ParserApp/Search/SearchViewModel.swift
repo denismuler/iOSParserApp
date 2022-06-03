@@ -2,7 +2,7 @@
 ////  SearchViewModel.swift
 ////  iOS_ParserApp
 ////
-////  Created by Настя Сергієнко on 31.05.2022.
+////  Created by Denys Melnyk on 31.05.2022.
 ////
 //
 //import RxCocoa

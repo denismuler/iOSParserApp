@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     
     private let tableView: UITableView = {
         let table = UITableView()
@@ -25,6 +25,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private var articles = [Article]()
     private var viewModels = [NewsTableViewCellViewModel]()
+    private var data = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.backgroundColor = .systemGray
         fetchTopStories()
         configureUI()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+            APICaller.shared.fetchData(completion: { [weak self] result in
+            switch result {
+            case .success (let data):
+                self?.data.append(contentsOf: data)
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            case .failure(_):
+                break
+            }
+        })
     }
     
     func configureUI() {
@@ -115,4 +131,52 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
+    
+    private func createSpinnerFooter() -> UIView {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
+        
+        let spinner = UIActivityIndicatorView()
+        spinner.center = footerView.center
+        footerView.addSubview(spinner)
+        spinner.startAnimating()
+        
+        return footerView
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        if position > (tableView.contentSize.height-100-scrollView.frame.size.height) {
+            
+            guard APICaller.shared.isPaginating else {
+                return
+            }
+            self.tableView.tableFooterView = createSpinnerFooter()
+            
+            APICaller.shared.fetchData(pagination: true) { [weak self]result in
+                DispatchQueue.main.async {
+                    self?.tableView.tableFooterView = nil
+                }
+                switch result {
+                case .success(let moreData):
+                    self?.data.append(contentsOf: moreData)
+                    DispatchQueue.main.async {
+                        self?.tableView.reloadData()
+                    }
+                case .failure(_):
+                    break
+                }
+            }
+        }
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+

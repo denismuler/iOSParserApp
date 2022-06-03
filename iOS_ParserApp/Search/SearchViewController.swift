@@ -46,7 +46,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var data = Array<Any>()
         return data.count
     }
     
@@ -94,7 +93,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 extension SearchViewController: SearchViewDelegate {
    
     func addSearchRecord(nameValue: String) {
-        // Logic with timer should be here =
+        
         timer = Timer.scheduledTimer(timeInterval: 2, target: self,
                                      selector: #selector(self.executeAction),
                                      userInfo: nil, repeats: false)

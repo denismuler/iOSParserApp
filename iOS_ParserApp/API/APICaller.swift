@@ -7,10 +7,29 @@
 
 import Foundation
 
-final class APICaller {
+ class APICaller {
+     
+    public var isPaginating = false
     static let shared = APICaller()
     struct Constants {
         static let topHeadlinesURL = URL(string:  "https://gnews.io/api/v4/search?q=example&token=6c37bfdd1f82599774137b25eb8f9a09")
+    }
+    
+    func fetchData(pagination: Bool = false, completion: @escaping (Result<[String], Error>) -> Void) {
+        if pagination {
+            isPaginating = true
+        }
+        DispatchQueue.global().asyncAfter(deadline: .now() + (pagination ? 3 : 2), execute: {
+            let originalData = [ "dd"
+            ]
+            let newData = [
+                "aa"
+            ]
+            completion(.success(pagination ? newData : originalData ))
+            if pagination {
+                self.isPaginating = false
+            }
+        })
     }
     
     private init() {}

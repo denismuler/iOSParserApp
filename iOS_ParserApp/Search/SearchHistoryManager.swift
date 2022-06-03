@@ -2,7 +2,7 @@
 //  SearchView.swift
 //  iOS_ParserApp
 //
-//  Created by Настя Сергієнко on 30.05.2022.
+//  Created by Denys Melnyk on 30.05.2022.
 //
 
 import Foundation
