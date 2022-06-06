@@ -20,7 +20,8 @@ import Foundation
             isPaginating = true
         }
         DispatchQueue.global().asyncAfter(deadline: .now() + (pagination ? 3 : 2), execute: {
-            let originalData = [ "dd"
+            let originalData = [
+                "dd"
             ]
             let newData = [
                 "aa"
@@ -43,6 +44,7 @@ import Foundation
             if let error = error {
                 completion(.failure(error))
             }
+            
             else if let data = data {
                 
                 do {

@@ -13,7 +13,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         let label = UILabel(frame: CGRect.zero)
-        label.text = "Friends View Controller"
+        label.text = "More View Controller"
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false

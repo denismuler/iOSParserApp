@@ -28,6 +28,12 @@ class HeaderView: UIView {
         layer.cornerRadius = 20
         layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
  
+        
+        addShadow(offset: .init(width: 0, height: 6),
+                  color: UIColor(named: "shadowColor")!,
+                                radius: 20,
+                                opacity: 0.06)
+        
         addSubview(containerView)
         containerView.frame = self.bounds
         containerView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

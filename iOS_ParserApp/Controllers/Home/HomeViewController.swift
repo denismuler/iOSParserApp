@@ -35,7 +35,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         view.backgroundColor = .white
-        tableView.backgroundColor = .systemGray
+        tableView.backgroundColor = .white
         fetchTopStories()
         configureUI()
     }
@@ -64,7 +64,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             headerView.leftAnchor.constraint(equalTo: view.leftAnchor),
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             headerView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 150)
+            headerView.heightAnchor.constraint(equalToConstant: 75)
         ])
         
         view.addSubview(tableView)

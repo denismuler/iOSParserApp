@@ -13,7 +13,7 @@ class NewsViewController: UIViewController {
         super.viewDidLoad()
       
         let label = UILabel(frame: CGRect.zero)
-        label.text = "Calender View Controller"
+        label.text = "News View Controller"
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false

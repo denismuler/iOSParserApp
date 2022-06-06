@@ -18,6 +18,15 @@ class SearchView: UIView, UITextFieldDelegate {
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var textField: UITextField!
     
+    
+    @IBAction func filterButtonPressed(_ sender: UIButton) {
+        print("1")
+    }
+    
+    @IBAction func listButtonPressed(_ sender: UIButton) {
+        print("2")  
+    }
+    
     var delegate: SearchViewDelegate?
     
     required init?(coder: NSCoder) {
@@ -28,8 +37,11 @@ class SearchView: UIView, UITextFieldDelegate {
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
-        
         textField.delegate = self
+        
+        self.listButton.setTitle("", for: .normal)
+        self.filterButton.setTitle("", for: .normal)
+        
     }
     
     private func commonInit() {
@@ -50,8 +62,6 @@ class SearchView: UIView, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("textFieldDidEndEditing")
-        // add another method into protocol
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
