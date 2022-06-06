@@ -2,7 +2,7 @@
 //  UIView+Shadow.swift
 //  iOS_ParserApp
 //
-//  Created by Настя Сергієнко on 03.06.2022.
+//  Created by Denys Melnyk on 03.06.2022.
 //
 
 import UIKit

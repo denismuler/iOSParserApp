@@ -57,6 +57,11 @@
 		4CAE1B6D284A83BC00187819 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE1B6C284A83BC00187819 /* UIView+Shadow.swift */; };
 		4CC240CC28364EC400E4B091 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC240CB28364EC400E4B091 /* APICaller.swift */; };
 		4CC240CE28365C5C00E4B091 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC240CD28365C5C00E4B091 /* NewsTableViewCell.swift */; };
+		4CD8152B284E61BD00A8246A /* DateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8152A284E61BD00A8246A /* DateTextField.swift */; };
+		4CD8152D284E61D300A8246A /* DateTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8152C284E61D300A8246A /* DateTextField.xib */; };
+		4CD81530284E75F900A8246A /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8152F284E75F900A8246A /* Filter.storyboard */; };
+		4CD81533284E846900A8246A /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD81532284E846900A8246A /* FilterViewController.swift */; };
+		4CD81535284E847600A8246A /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD81534284E847600A8246A /* FilterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +137,11 @@
 		4CAE1B6C284A83BC00187819 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		4CC240CB28364EC400E4B091 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		4CC240CD28365C5C00E4B091 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		4CD8152A284E61BD00A8246A /* DateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTextField.swift; sourceTree = "<group>"; };
+		4CD8152C284E61D300A8246A /* DateTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTextField.xib; sourceTree = "<group>"; };
+		4CD8152F284E75F900A8246A /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
+		4CD81532284E846900A8246A /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		4CD81534284E847600A8246A /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		B3952F6741171B345538B6B2 /* Pods-iOS_ParserApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_ParserApp.debug.xcconfig"; path = "Target Support Files/Pods-iOS_ParserApp/Pods-iOS_ParserApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -310,6 +320,8 @@
 				4C393ED22844EFB2007295AC /* API */,
 				4C6148F928342596009D1995 /* Navigation Menu */,
 				4CD50B592836E2BA009AA040 /* UI */,
+				4CD8152E284E61D800A8246A /* DateTextField */,
+				4CD81531284E760800A8246A /* Filter */,
 				4CAE1B6B284A83A500187819 /* Extensions */,
 				4C6148CF28341C0E009D1995 /* Main.storyboard */,
 				4C6148D228341C0F009D1995 /* Assets.xcassets */,
@@ -349,14 +361,57 @@
 		4CD50B592836E2BA009AA040 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4CD81526284E616500A8246A /* Header */,
+				4CD81527284E617300A8246A /* Search */,
+				4CD81528284E617F00A8246A /* SearchCell */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4CD81526284E616500A8246A /* Header */ = {
+			isa = PBXGroup;
+			children = (
 				4C83F0062837E6AF0069928F /* HeaderView.swift */,
 				4C83F0072837E6AF0069928F /* Header.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		4CD81527284E617300A8246A /* Search */ = {
+			isa = PBXGroup;
+			children = (
 				4C46D90C283E84B700ABDC5C /* SearchView.swift */,
 				4C46D90A283E84AF00ABDC5C /* Search.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		4CD81528284E617F00A8246A /* SearchCell */ = {
+			isa = PBXGroup;
+			children = (
 				4C02E3D3284641B8001D04FD /* SearchHistoryTableViewCell.swift */,
 				4C02E3D1284641A4001D04FD /* SearchHistoryTableViewCell.xib */,
 			);
-			path = UI;
+			path = SearchCell;
+			sourceTree = "<group>";
+		};
+		4CD8152E284E61D800A8246A /* DateTextField */ = {
+			isa = PBXGroup;
+			children = (
+				4CD8152A284E61BD00A8246A /* DateTextField.swift */,
+				4CD8152C284E61D300A8246A /* DateTextField.xib */,
+			);
+			path = DateTextField;
+			sourceTree = "<group>";
+		};
+		4CD81531284E760800A8246A /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				4CD81532284E846900A8246A /* FilterViewController.swift */,
+				4CD81534284E847600A8246A /* FilterViewModel.swift */,
+				4CD8152F284E75F900A8246A /* Filter.storyboard */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		B2F8B56D6992247437911E89 /* Pods */ = {
@@ -505,9 +560,11 @@
 				4C39660F284A7D3000FD3A1C /* MuseoSansCyrl-500Italic.ttf in Resources */,
 				4C396616284A7D3000FD3A1C /* MuseoSansCyrl-100Italic.ttf in Resources */,
 				4C396628284A7D3B00FD3A1C /* OpenSans-Italic.ttf in Resources */,
+				4CD81530284E75F900A8246A /* Filter.storyboard in Resources */,
 				4C396613284A7D3000FD3A1C /* MuseoSansCyrl-300Italic.ttf in Resources */,
 				4C396615284A7D3000FD3A1C /* MuseoSansCyrl-100.ttf in Resources */,
 				4C39662C284A7D3B00FD3A1C /* OpenSans-Bold.ttf in Resources */,
+				4CD8152D284E61D300A8246A /* DateTextField.xib in Resources */,
 				4C396618284A7D3000FD3A1C /* MuseoSansCyrl-700Italic.ttf in Resources */,
 				4C396610284A7D3000FD3A1C /* MuseoSansCyrl-900Italic.ttf in Resources */,
 				4C39662B284A7D3B00FD3A1C /* OpenSans-LightItalic.ttf in Resources */,
@@ -592,11 +649,14 @@
 				4C1F31012848036B000B8F33 /* SearchDataSource.swift in Sources */,
 				4C83F0082837E6AF0069928F /* HeaderView.swift in Sources */,
 				4C46D90D283E84B700ABDC5C /* SearchView.swift in Sources */,
+				4CD8152B284E61BD00A8246A /* DateTextField.swift in Sources */,
 				4C5B9A25283521EF00D9650D /* ProfileViewController.swift in Sources */,
 				4C02E3D028463C99001D04FD /* Coordinator.swift in Sources */,
 				4C393EDA28450E9D007295AC /* SearchHistoryManager.swift in Sources */,
 				4C5B9A1D283520DA00D9650D /* HomeViewController.swift in Sources */,
+				4CD81535284E847600A8246A /* FilterViewModel.swift in Sources */,
 				4C02E3CE28463BB8001D04FD /* SearchViewModel.swift in Sources */,
+				4CD81533284E846900A8246A /* FilterViewController.swift in Sources */,
 				4C6148FB283425AC009D1995 /* TabItem.swift in Sources */,
 				4CAE1B6D284A83BC00187819 /* UIView+Shadow.swift in Sources */,
 				4C1F30FF2847FD99000B8F33 /* ViewModelType.swift in Sources */,
@@ -704,7 +764,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -758,7 +818,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -784,7 +844,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -794,7 +854,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -814,7 +874,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -824,7 +884,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
