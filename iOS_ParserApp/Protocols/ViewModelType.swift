@@ -1,8 +1,8 @@
 //
 //  ViewModelType.swift
-//  iOS Parser
+//  iOS_ParserApp
 //
-//  Created by Prefect on 07.04.2022.
+//  Created by Denys Melnyk on 01.06.2022.
 //
 
 protocol ViewModelType {

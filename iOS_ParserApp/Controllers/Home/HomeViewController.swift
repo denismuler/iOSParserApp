@@ -39,11 +39,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         configureUI()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
             APICaller.shared.fetchData(completion: { [weak self] result in

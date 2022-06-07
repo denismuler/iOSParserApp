@@ -27,9 +27,4 @@ class NewsViewController: UIViewController {
             label.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
         ])
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
-    }
 }
