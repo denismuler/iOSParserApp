@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2F8EC4444A941E4CA541F720 /* Pods_iOS_ParserApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F074E5F1D88273BB5C983EB /* Pods_iOS_ParserApp.framework */; };
+		4C02E3D028463C99001D04FD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C02E3CF28463C99001D04FD /* Coordinator.swift */; };
 		4C02E3D2284641A4001D04FD /* SearchHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C02E3D1284641A4001D04FD /* SearchHistoryTableViewCell.xib */; };
 		4C02E3D4284641B8001D04FD /* SearchHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C02E3D3284641B8001D04FD /* SearchHistoryTableViewCell.swift */; };
+		4C1F30FF2847FD99000B8F33 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F30FE2847FD99000B8F33 /* ViewModelType.swift */; };
 		4C1F31012848036B000B8F33 /* SearchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F31002848036B000B8F33 /* SearchDataSource.swift */; };
 		4C27EBDB28351EE7001A7842 /* NavigationMenuBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C27EBDA28351EE7001A7842 /* NavigationMenuBaseController.swift */; };
 		4C393ED828450B83007295AC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 4C393ED728450B83007295AC /* SQLite */; };
@@ -58,7 +60,6 @@
 		4CD8152D284E61D300A8246A /* DateTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8152C284E61D300A8246A /* DateTextField.xib */; };
 		4CD81530284E75F900A8246A /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8152F284E75F900A8246A /* Filter.storyboard */; };
 		4CD81533284E846900A8246A /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD81532284E846900A8246A /* FilterViewController.swift */; };
-		FA44D4BF284FD9CD008CB13C /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44D4BE284FD9CD008CB13C /* StoryboardInitializable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +82,10 @@
 /* Begin PBXFileReference section */
 		0FC10C8E8E75A7D899519B52 /* Pods-iOS_ParserApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_ParserApp.release.xcconfig"; path = "Target Support Files/Pods-iOS_ParserApp/Pods-iOS_ParserApp.release.xcconfig"; sourceTree = "<group>"; };
 		2F074E5F1D88273BB5C983EB /* Pods_iOS_ParserApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_ParserApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C02E3CF28463C99001D04FD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		4C02E3D1284641A4001D04FD /* SearchHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		4C02E3D3284641B8001D04FD /* SearchHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		4C1F30FE2847FD99000B8F33 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		4C1F31002848036B000B8F33 /* SearchDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataSource.swift; sourceTree = "<group>"; };
 		4C27EBDA28351EE7001A7842 /* NavigationMenuBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMenuBaseController.swift; sourceTree = "<group>"; };
 		4C393ED928450E9D007295AC /* SearchHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryManager.swift; sourceTree = "<group>"; };
@@ -136,7 +139,6 @@
 		4CD8152F284E75F900A8246A /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		4CD81532284E846900A8246A /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		B3952F6741171B345538B6B2 /* Pods-iOS_ParserApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_ParserApp.debug.xcconfig"; path = "Target Support Files/Pods-iOS_ParserApp/Pods-iOS_ParserApp.debug.xcconfig"; sourceTree = "<group>"; };
-		FA44D4BE284FD9CD008CB13C /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,15 @@
 				4C5B9A24283521EF00D9650D /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		4C1F30FB2847FD63000B8F33 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4C02E3CF28463C99001D04FD /* Coordinator.swift */,
+				4C1F30FE2847FD99000B8F33 /* ViewModelType.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		4C393ED22844EFB2007295AC /* API */ = {
@@ -300,6 +311,7 @@
 				FA3352F62848E8BD002935FA /* Application */,
 				4C5B9A1B283520AB00D9650D /* Controllers */,
 				4C393EDD28451033007295AC /* Search */,
+				4C1F30FB2847FD63000B8F33 /* Protocols */,
 				4C393ED22844EFB2007295AC /* API */,
 				4C6148F928342596009D1995 /* Navigation Menu */,
 				4CD50B592836E2BA009AA040 /* UI */,
@@ -347,7 +359,6 @@
 				4CD81526284E616500A8246A /* Header */,
 				4CD81527284E617300A8246A /* Search */,
 				4CD81528284E617F00A8246A /* SearchCell */,
-				FA44D4BE284FD9CD008CB13C /* StoryboardInitializable.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -628,18 +639,19 @@
 				4C5B9A212835210000D9650D /* SearchViewController.swift in Sources */,
 				4CC240CC28364EC400E4B091 /* APICaller.swift in Sources */,
 				4C6148CA28341C0E009D1995 /* AppDelegate.swift in Sources */,
-				FA44D4BF284FD9CD008CB13C /* StoryboardInitializable.swift in Sources */,
 				4C5B9A23283521C400D9650D /* MoreViewController.swift in Sources */,
 				4C1F31012848036B000B8F33 /* SearchDataSource.swift in Sources */,
 				4C83F0082837E6AF0069928F /* HeaderView.swift in Sources */,
 				4C46D90D283E84B700ABDC5C /* SearchView.swift in Sources */,
 				4CD8152B284E61BD00A8246A /* DateTextField.swift in Sources */,
 				4C5B9A25283521EF00D9650D /* ProfileViewController.swift in Sources */,
+				4C02E3D028463C99001D04FD /* Coordinator.swift in Sources */,
 				4C393EDA28450E9D007295AC /* SearchHistoryManager.swift in Sources */,
 				4C5B9A1D283520DA00D9650D /* HomeViewController.swift in Sources */,
 				4CD81533284E846900A8246A /* FilterViewController.swift in Sources */,
 				4C6148FB283425AC009D1995 /* TabItem.swift in Sources */,
 				4CAE1B6D284A83BC00187819 /* UIView+Shadow.swift in Sources */,
+				4C1F30FF2847FD99000B8F33 /* ViewModelType.swift in Sources */,
 				4C02E3D4284641B8001D04FD /* SearchHistoryTableViewCell.swift in Sources */,
 				4C5B9A1F283520EB00D9650D /* NewsViewController.swift in Sources */,
 			);
