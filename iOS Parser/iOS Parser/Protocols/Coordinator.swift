@@ -1,8 +1,8 @@
 //
 //  Coordinator.swift
-//  iOS_ParserApp
+//  iOS Parser
 //
-//  Created by Denys Melnyk on 31.05.2022.
+//  Created by Prefect on 27.03.2022.
 //
 
 import UIKit
