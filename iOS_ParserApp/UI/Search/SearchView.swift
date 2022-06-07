@@ -19,7 +19,6 @@ class SearchView: UIView, UITextFieldDelegate {
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var textField: UITextField!
     
-    
     @IBAction func filterButtonPressed(_ sender: UIButton) {
         delegate?.openFilterScreen()
     }
