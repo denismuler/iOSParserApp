@@ -9,6 +9,7 @@ import UIKit
 
 protocol SearchViewDelegate: SearchViewController {
     func addSearchRecord(nameValue: String)
+    func openFilterScreen()
 }
 
 class SearchView: UIView, UITextFieldDelegate {
@@ -20,11 +21,10 @@ class SearchView: UIView, UITextFieldDelegate {
     
     
     @IBAction func filterButtonPressed(_ sender: UIButton) {
-        print("1")
+        delegate?.openFilterScreen()
     }
     
     @IBAction func listButtonPressed(_ sender: UIButton) {
-        print("2")  
     }
     
     var delegate: SearchViewDelegate?

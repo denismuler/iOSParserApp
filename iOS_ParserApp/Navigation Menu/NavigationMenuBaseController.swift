@@ -39,10 +39,7 @@ class NavigationMenuBaseController: UITabBarController {
         self.customTabBar.clipsToBounds = true
         self.customTabBar.itemTapped = self.changeTab
         self.customTabBar.backgroundColor = UIColor(red: 95, green: 113, blue: 97, alpha: 0.5)
-        
-//        customTabBar.image = UIImage(named: "tabBarbg")
-//        customTabBar.isUserInteractionEnabled = true
-      
+ 
         self.view.addSubview(customTabBar)
         
         NSLayoutConstraint.activate([

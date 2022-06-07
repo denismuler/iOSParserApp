@@ -30,12 +30,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "News"
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        view.backgroundColor = .white
-        tableView.backgroundColor = .white
+        view.backgroundColor = UIColor(red: 229, green: 229, blue: 229, alpha: 1)
+        tableView.backgroundColor = .clear
         fetchTopStories()
         configureUI()
     }

@@ -28,12 +28,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             data.append("Some data\(x)")
         }
         
-        title = "Search history"
         tableView.register(SearchHistoryTableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
-        view.backgroundColor = .white
-        tableView.backgroundColor = .white
+        view.backgroundColor = UIColor(red: 229, green: 229, blue: 229, alpha: 1)
+        tableView.backgroundColor = UIColor(red: 229, green: 229, blue: 229, alpha: 1)
         configureUI()
         }
     
@@ -87,11 +86,22 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.deselectRow(at: indexPath, animated: true)
         print("cell tapped")
     }
+    
+    @objc func executeAction() {
+        actionClosure?()
+    }
+    
+    func textFieldChanged(with string: String) {
+       
+    }
 }
 
 // MARK: - SearchViewDelegate
 extension SearchViewController: SearchViewDelegate {
-   
+    func openFilterScreen() {
+        self.navigationController?.pushViewController(FilterViewController(), animated: true)
+    }
+    
     func addSearchRecord(nameValue: String) {
         
         timer = Timer.scheduledTimer(timeInterval: 2, target: self,
@@ -101,13 +111,5 @@ extension SearchViewController: SearchViewDelegate {
         if nameValue.count > 4 {
             SearchHistoryManager.shared.addSearchRecord(nameValue: nameValue)
         }
-    }
-    
-    @objc func executeAction() {
-        actionClosure?()
-    }
-    
-    func textFieldChanged(with string: String) {
-       
     }
 }

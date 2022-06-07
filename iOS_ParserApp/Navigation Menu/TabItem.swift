@@ -15,19 +15,30 @@ enum TabItem: String, CaseIterable {
     case more = "more"
     
     var viewController: UIViewController {
-        switch self {
-        case .home:
-            return HomeViewController()
-        case .news:
-            return NewsViewController()
-        case .search:
-            return SearchViewController()
-        case .profile:
-          return ProfileViewController()
-        case .more:
-            return MoreViewController()
-        }
-    }
+                switch self {
+                case .home:
+                    let viewController = HomeViewController()
+                    let navigationController = UINavigationController(rootViewController: viewController)
+                    return navigationController
+                case .news:
+                    let viewController = NewsViewController()
+                    let navigationController = UINavigationController(rootViewController: viewController)
+                    return navigationController
+                case .search:
+                    let viewController = SearchViewController()
+                    let navigationController = UINavigationController(rootViewController: viewController)
+                    return navigationController
+                case .profile:
+                    let viewController = ProfileViewController()
+                    let navigationController = UINavigationController(rootViewController: viewController)
+                    return navigationController
+                case .more:
+                    let viewController = MoreViewController()
+                    let navigationController = UINavigationController(rootViewController: viewController)
+                    return navigationController
+                }
+            }
+    
     
     var icon: UIImage? {
         switch self {

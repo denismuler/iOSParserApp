@@ -24,7 +24,7 @@
         <!--Filter View Controller-->
         <scene sceneID="qfQ-6W-Nwa">
             <objects>
-                <viewController id="DB9-JJ-R6p" customClass="FilterViewController" customModule="iOS_Parser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DB9-JJ-R6p" customClass="FilterViewController" customModule="iOS_ParserApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8vi-4y-dRp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,14 +81,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMZ-En-7zq" customClass="DateTextFieldView" customModule="iOS_Parser" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMZ-En-7zq" customClass="DateTextFieldView" customModule="iOS_ParserApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="213.5" width="414" height="89"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="89" id="zSj-cR-bTc"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Nw-2M-QWp" customClass="DateTextFieldView" customModule="iOS_Parser" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Nw-2M-QWp" customClass="DateTextFieldView" customModule="iOS_ParserApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="322.5" width="414" height="89"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
