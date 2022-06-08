@@ -8,15 +8,18 @@
 import Foundation
 import UIKit
 
-class FilterViewController: UIViewController, StoryboardInitializable {
+class FilterViewController: UIViewController {
     
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var fromDateTextFieldView: DateTextField!
     @IBOutlet weak var toDateTextFieldView: DateTextField!
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = false
+
+    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
     }
-}
+        }
+    
