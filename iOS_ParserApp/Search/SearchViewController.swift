@@ -16,6 +16,8 @@ class SearchViewController: UIViewController {
     
     let tableView = UITableView()
     
+    var sortScreen: SortView!
+    
     var timer:Timer?
     var data = [String]()
     var actionClosure : (()->Void)?
@@ -31,8 +33,10 @@ class SearchViewController: UIViewController {
         tableView.register(SearchHistoryTableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
-        view.backgroundColor = UIColor(red: 229, green: 229, blue: 229, alpha: 1)
         tableView.backgroundColor = UIColor(red: 229, green: 229, blue: 229, alpha: 1)
+        
+        view.backgroundColor = UIColor(red: 229, green: 229, blue: 229, alpha: 1)
+       
         configureUI()
     }
     
@@ -88,7 +92,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         //                                                 for: indexPath)
 //        let data = SearchHistoryManager.shared.getHistoryRecords()
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SearchHistoryTableViewCell
-        //        cell.textLabel?.text = data[indexPath.row]
+                cell.textLabel?.text = data[indexPath.row]
         cell.textLabel?.text = data[indexPath.row] as! String
         return cell
     }
@@ -106,6 +110,15 @@ extension SearchViewController: SearchViewDelegate {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
+    func openSortScreen() {
+       let sortScreen = SortView(frame: self.view.frame)
+        self.view.addSubview(sortScreen)
+        
+    }
+//    func openSortScreen() {
+//        let viewController = SortView.createFromStoryboard()
+//        self.navigationController?.pushViewController(viewController, animated: true)
+//    }
     func addSearchRecord(nameValue: String) {
         
         timer = Timer.scheduledTimer(timeInterval: 2, target: self,

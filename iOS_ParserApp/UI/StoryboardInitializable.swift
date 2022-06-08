@@ -35,3 +35,9 @@ extension StoryboardInitializable where Self: FilterViewController {
         return "Filter"
     }
 }
+
+//extension StoryboardInitializable where Self: SortView {
+//        static var storyboardName: String {
+//            return "Sort"
+//        }
+//    }

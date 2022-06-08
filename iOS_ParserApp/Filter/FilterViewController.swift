@@ -18,5 +18,10 @@ class FilterViewController: UIViewController, StoryboardInitializable {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
+        
+        let yourBackImage = UIImage(named: "Vector")
+        self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+        self.navigationController?.navigationBar.backItem?.title = "Back"
     }
 }

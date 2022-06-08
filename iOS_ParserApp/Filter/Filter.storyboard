@@ -33,7 +33,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osH-i7-Itt">
-                                        <rect key="frame" x="170.5" y="7" width="73.5" height="36"/>
+                                        <rect key="frame" x="173" y="7.5" width="68.5" height="35"/>
                                         <fontDescription key="fontDescription" name="MuseoSansCyrl-900Italic" family="Museo Sans Cyrl" pointSize="30"/>
                                         <color key="textColor" name="sacoBlue"/>
                                         <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHv-fs-154">
                                         <rect key="frame" x="15" y="10.5" width="34" height="29"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="Vector 7-2"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Vector"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -70,36 +70,36 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG8-bP-z6o">
-                                <rect key="frame" x="16" y="138" width="382" height="22"/>
+                                <rect key="frame" x="16" y="138" width="382" height="19"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKF-a4-JDA">
-                                <rect key="frame" x="16" y="180" width="382" height="19.5"/>
+                                <rect key="frame" x="16" y="177" width="382" height="16.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMZ-En-7zq" customClass="DateTextFieldView" customModule="iOS_ParserApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="219.5" width="414" height="89"/>
+                                <rect key="frame" x="0.0" y="213.5" width="414" height="89"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="89" id="zSj-cR-bTc"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Nw-2M-QWp" customClass="DateTextFieldView" customModule="iOS_ParserApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="328.5" width="414" height="89"/>
+                                <rect key="frame" x="0.0" y="322.5" width="414" height="89"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="89" id="BWu-cz-MaV"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czi-dX-dhU">
-                                <rect key="frame" x="0.0" y="437.5" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="431.5" width="414" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1b-l2-kSJ">
-                                        <rect key="frame" x="15" y="10" width="63" height="20"/>
+                                        <rect key="frame" x="15" y="10" width="59.5" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="CAv-yt-NIk"/>
                                         </constraints>
@@ -182,7 +182,7 @@
     </scenes>
     <resources>
         <image name="Union-2" width="17" height="19"/>
-        <image name="Vector 7-2" width="10" height="15"/>
+        <image name="Vector" width="10" height="15"/>
         <namedColor name="backgroundGrey">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

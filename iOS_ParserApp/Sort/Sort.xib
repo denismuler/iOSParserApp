@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SortView" customModule="iOS_ParserApp" customModuleProvider="target">
+            <connections>
+                <outlet property="relevance" destination="zIL-BD-gRE" id="mYe-bM-TMI"/>
+                <outlet property="uploadDate" destination="utA-id-Jog" id="2Fo-L8-fpw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="Sort" id="jyR-xD-h96" customClass="SortView" customModule="iOS_ParserApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byL-ug-ere">
+                    <rect key="frame" x="16" y="18" width="72" height="24"/>
+                    <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="YtI-yf-6Ac">
+                    <rect key="frame" x="16" y="59" width="359" height="1"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="0ue-cg-Lgh">
+                    <rect key="frame" x="16" y="119" width="359" height="1"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZU8-ng-2I6">
+                    <rect key="frame" x="16" y="81" width="93" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relevance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRR-cG-2wy">
+                    <rect key="frame" x="16" y="140" width="78" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utA-id-Jog">
+                    <rect key="frame" x="335" y="73" width="91" height="38"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="PressInButton" title="Button"/>
+                    <connections>
+                        <action selector="dateButton:" destination="-1" eventType="touchUpInside" id="xWO-RY-rLj"/>
+                        <action selector="uploadDatePressed:" destination="-1" eventType="touchUpInside" id="dii-zQ-NQS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIL-BD-gRE">
+                    <rect key="frame" x="335" y="133" width="91" height="38"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="PressInButton" title="Button"/>
+                    <connections>
+                        <action selector="relevanceButton:" destination="-1" eventType="touchUpInside" id="Br7-u5-eYu"/>
+                        <action selector="relevancePressed:" destination="-1" eventType="touchUpInside" id="QsC-5i-5ZJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="qQT-Vb-sdb"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="zIL-BD-gRE" firstAttribute="leading" secondItem="jyR-xD-h96" secondAttribute="leading" constant="335" id="9Dq-rU-r1g"/>
+                <constraint firstItem="nRR-cG-2wy" firstAttribute="top" secondItem="0ue-cg-Lgh" secondAttribute="bottom" constant="20" id="AbT-Zo-5vE"/>
+                <constraint firstItem="0ue-cg-Lgh" firstAttribute="leading" secondItem="YtI-yf-6Ac" secondAttribute="leading" id="Ck9-QP-HFb"/>
+                <constraint firstItem="byL-ug-ere" firstAttribute="leading" secondItem="jyR-xD-h96" secondAttribute="leading" constant="16" id="FuA-CD-uuY"/>
+                <constraint firstItem="ZU8-ng-2I6" firstAttribute="leading" secondItem="qQT-Vb-sdb" secondAttribute="leading" constant="16" id="ITt-Jb-Tdt"/>
+                <constraint firstAttribute="trailing" secondItem="byL-ug-ere" secondAttribute="trailing" constant="297" id="L4c-mc-1iF"/>
+                <constraint firstItem="utA-id-Jog" firstAttribute="leading" secondItem="jyR-xD-h96" secondAttribute="leading" constant="335" id="OZm-tv-kh5"/>
+                <constraint firstItem="nRR-cG-2wy" firstAttribute="leading" secondItem="qQT-Vb-sdb" secondAttribute="leading" constant="16" id="Yzr-ep-R2Y"/>
+                <constraint firstItem="0ue-cg-Lgh" firstAttribute="top" secondItem="ZU8-ng-2I6" secondAttribute="bottom" constant="17" id="avC-uR-QRX"/>
+                <constraint firstItem="byL-ug-ere" firstAttribute="top" secondItem="jyR-xD-h96" secondAttribute="top" constant="18" id="eRd-5d-jWZ"/>
+                <constraint firstItem="0ue-cg-Lgh" firstAttribute="leading" secondItem="ZU8-ng-2I6" secondAttribute="leading" id="ioD-Q2-7tS"/>
+                <constraint firstItem="zIL-BD-gRE" firstAttribute="top" secondItem="0ue-cg-Lgh" secondAttribute="bottom" constant="13" id="s9F-0e-Qhm"/>
+                <constraint firstItem="ZU8-ng-2I6" firstAttribute="top" secondItem="YtI-yf-6Ac" secondAttribute="bottom" constant="21" id="vOL-lJ-Jfr"/>
+                <constraint firstItem="utA-id-Jog" firstAttribute="top" secondItem="YtI-yf-6Ac" secondAttribute="bottom" constant="13" id="xKR-NF-r6u"/>
+                <constraint firstItem="YtI-yf-6Ac" firstAttribute="top" secondItem="byL-ug-ere" secondAttribute="bottom" constant="17" id="zXj-Ct-Q3O"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-454.34782608695656" y="37.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="PressInButton" width="24" height="24"/>
+        <image name="Rectangle" width="359" height="1"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

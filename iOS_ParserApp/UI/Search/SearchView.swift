@@ -10,6 +10,7 @@ import UIKit
 protocol SearchViewDelegate: SearchViewController {
     func addSearchRecord(nameValue: String)
     func openFilterScreen()
+    func openSortScreen()
 }
 
 class SearchView: UIView, UITextFieldDelegate {
@@ -24,8 +25,9 @@ class SearchView: UIView, UITextFieldDelegate {
     }
     
     @IBAction func listButtonPressed(_ sender: UIButton) {
+        delegate?.openSortScreen()
     }
-    
+        
     var delegate: SearchViewDelegate?
     
     required init?(coder: NSCoder) {
@@ -45,7 +47,6 @@ class SearchView: UIView, UITextFieldDelegate {
     
     private func commonInit() {
         Bundle.main.loadNibNamed("Search", owner: self, options: nil)
-        filterButton.setTitle(nil, for: .normal)
         
         clipsToBounds = true
         layer.cornerRadius = 20
